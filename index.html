@@ -304,6 +304,37 @@
             font-size: 1.5rem;
         }
 
+        /* Link ke halaman esai */
+        .essay-link {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .essay-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: rgba(255, 140, 56, 0.1);
+            color: #ff8c38;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid #ff8c38;
+            transition: all 0.3s;
+        }
+        
+        .essay-link a:hover {
+            background: #ff8c38;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255,140,56,0.3);
+        }
+        
+        .essay-link a i {
+            font-size: 1.2rem;
+        }
+
         .footer-links {
             margin-top: 2.5rem;
             display: flex;
@@ -411,10 +442,18 @@ DAN PERANNYA DI MASA DEPAN
                     </a>
                 </div>
 
+                <!-- Link ke halaman esai ChromeOS -->
+                <div class="essay-link">
+                    <a href="esai-chromeos.html" target="_blank">
+                        <i class="fas fa-file-alt"></i> Baca Esai Lengkap (HTML)
+                    </a>
+                </div>
+
                 <!-- footer links -->
                 <div class="footer-links">
                     <a href="#" id="githubMockLink"><i class="fab fa-github"></i> https://dimask016.github.io/hcd02-esai/</a>
-                    <a href="#"><i class="fas fa-file-pdf"></i> HCD02</a>
+                    <a href="esai-chromeos.html"><i class="fas fa-file-pdf"></i> Esai ChromeOS</a>
+                   
                 </div>
             </div>
         </div>

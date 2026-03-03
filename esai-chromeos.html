@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Esai: Human-Centered Design pada ChromeOS · Dimas Kurniawan</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2f6fc;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            color: #1e293b;
+            padding: 2rem 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .laporan-container {
+            max-width: 1100px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-radius: 28px;
+            padding: 2.8rem 3.2rem;
+            border: 1px solid #e0e8f0;
+        }
+
+        /* Header dengan logo dan judul persis seperti file */
+        .header-laporan {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #0b2b44;
+            padding-bottom: 1.5rem;
+        }
+
+        .logo-univ {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .logo-univ img {
+            width: 75px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 14px rgba(0,20,40,0.2);
+        }
+
+        .judul-utama {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0b2b44;
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+        }
+
+        .identitas-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.5rem;
+        }
+
+        .info-dosen {
+            background: #e9f0f9;
+            padding: 1rem 2rem;
+            border-radius: 40px;
+            text-align: right;
+        }
+
+        .info-dosen .dosen {
+            font-weight: 700;
+            color: #0b2b44;
+            font-size: 1.2rem;
+        }
+
+        .identitas-mahasiswa {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            text-align: right;
+        }
+
+        /* konten media - dengan gambar ChromeOS.jpeg */
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 24px;
+            box-shadow: 0 20px 30px -10px rgba(0,30,60,0.4);
+            border: 2px solid #b5cee8;
+            object-fit: cover;
+        }
+
+        /* kata pengantar / abstrak (dari file) */
+        .abstrak {
+            background: #f1f6fc;
+            padding: 2rem 2.2rem;
+            border-radius: 30px;
+            margin: 2rem 0;
+            border-left: 8px solid #2c4c6b;
+        }
+
+        .abstrak h3 {
+            color: #002b4a;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .abstrak p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* isi esai */
+        .bab {
+            margin-top: 2.5rem;
+        }
+
+        .bab h2 {
+            font-size: 1.9rem;
+            color: #0a1f33;
+            border-left: 10px solid #345e88;
+            padding-left: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .bab p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        /* kutipan / highlight */
+        .insight-box {
+            background: #f9fcff;
+            border-radius: 24px;
+            padding: 1.5rem 2rem;
+            margin: 1.8rem 0;
+            border: 1px solid #b9d2ec;
+            box-shadow: 0 6px 14px #e0ecf9;
+        }
+
+        /* footer */
+        .footer-laporan {
+            margin-top: 3rem;
+            border-top: 2px solid #0b2b44;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #2d4d74;
+        }
+
+        .ttd {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+
+        /* interaktif */
+        .btn-outline {
+            background: white;
+            border: 2px solid #1e3a5f;
+            color: #1e3a5f;
+            padding: 0.6rem 1.6rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 1rem 0;
+            transition: 0.2s;
+            font-family: 'Times New Roman', serif;
+        }
+        .btn-outline:hover {
+            background: #1e3a5f;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 700px) {
+            .laporan-container { padding: 1.5rem; }
+            .header-laporan { flex-direction: column; align-items: flex-start; }
+            .identitas-wrapper { align-items: flex-start; width: 100%; }
+            .info-dosen { text-align: left; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="laporan-container">
+
+    <!-- HEADER dengan logo Cakrawala University -->
+    <div class="header-laporan">
+        <div class="logo-univ">
+            <img src="logo-cakrawala-v2.webp" alt="Cakrawala University" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display:none; color:#a00; font-style:italic;">[Logo tidak ditemukan]</div>
+            <div>
+                <div class="judul-utama">HUMAN-CENTERED DESIGN<br>PADA CHROMEOS</div>
+                <div style="font-size:1rem; color:#2f5575;">DAN PERANNYA DI MASA DEPAN</div>
+            </div>
+        </div>
+        <div class="identitas-wrapper">
+            <div class="identitas-mahasiswa">
+                <strong>Dimas Kurniawan</strong> – 25120300016<br>
+                <span style="font-size:0.95rem;">Kelas: HCD02 – Human Centered Design</span>
+            </div>
+            <div class="info-dosen">
+                <div class="dosen"><i class="fas fa-chalkboard-teacher"></i> Dr. Fandy Neta, S.Pd., M.Pd.T.</div>
+                <div>Dosen Pengajar</div>
+                <div style="font-size:0.9rem;">Ilmu Komputer - 2026</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gambar media: DIGANTI DENGAN IMG SOURCE = ChromeOS.jpeg -->
+    <div class="hero-image">
+        <img src="chromeos.png" alt="ChromeOS - Human Centered Design" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div style="display:none; color:#a00; font-style:italic;">[Gambar ChromeOS.jpeg tidak ditemukan]</div>
+    </div>
+
+    <!-- Judul Refleksi (persis file) -->
+    <h2 style="font-size:2rem; margin: 2rem 0 1rem; color:#002b4a;">Refleksi dan Analisis Human-Centered Design pada ChromeOS serta Perannya di Masa Depan</h2>
+
+    <!-- BAB 1: Pengalaman Pengguna (isi sesuai file) -->
+    <div class="bab">
+        <h2>1. Pengalaman Pengguna dalam Menggunakan ChromeOS</h2>
+        <p>Selama menggunakan Chromebook dengan sistem operasi ChromeOS, saya merasakan pengalaman yang berbeda dibandingkan saat memakai sistem operasi lain. Sejak pertama kali menyalakan perangkat, semuanya terasa sederhana dan tidak rumit. Tidak ada proses pengaturan yang membingungkan. Sistem langsung siap digunakan dalam waktu yang sangat singkat, sehingga saya bisa langsung fokus pada pekerjaan tanpa harus melakukan banyak konfigurasi.</p>
+
+        <p>Chromebook yang saya gunakan memang dirancang untuk aktivitas berbasis internet dan layanan cloud. Karena itu, hampir semua kebutuhan seperti mengetik dokumen, mengakses email, hingga menyimpan file bisa dilakukan secara online. Proses booting yang cepat menjadi salah satu hal yang paling saya rasakan manfaatnya, terutama ketika harus bekerja dengan waktu terbatas. Saya tidak perlu menunggu lama seperti pada beberapa perangkat lain yang memerlukan proses loading cukup panjang.</p>
+
+        <p>Hal yang paling membantu menurut saya adalah kemudahan saat masuk menggunakan akun Google. Begitu login, seluruh data dan pengaturan langsung tersinkronisasi otomatis. File di Google Drive, riwayat pencarian, hingga ekstensi browser kembali seperti semula tanpa perlu dipasang ulang. Pengalaman ini sangat memudahkan ketika saya berganti perangkat, karena tidak perlu melakukan penyesuaian dari awal.</p>
+
+        <p>Dari segi tampilan, ChromeOS terlihat sederhana dan tidak berlebihan. Menu dan ikon disusun secara rapi serta mudah ditemukan. Notifikasi juga muncul dengan jelas tanpa terasa mengganggu. Karena tampilannya mirip dengan browser Chrome yang sudah familiar, saya tidak memerlukan waktu lama untuk beradaptasi. Semuanya terasa langsung bisa dipahami secara alami.</p>
+
+        <p>Jika dilihat dari prinsip kemudahan penggunaan, sistem ini memberikan informasi yang jelas tentang kondisi perangkat, seperti status baterai dan koneksi internet. Ketika ada pembaruan sistem, pemberitahuan muncul dengan bahasa yang mudah dimengerti. Selain itu, desain yang konsisten membuat saya tidak merasa kebingungan saat berpindah dari satu fitur ke fitur lainnya.</p>
+
+        <p>Dari pengalaman tersebut, saya menyimpulkan bahwa produk yang baik bukanlah yang memiliki fitur paling banyak atau terlihat paling canggih, tetapi yang mampu menjawab kebutuhan pengguna secara tepat. ChromeOS tidak mencoba menghadirkan terlalu banyak fungsi teknis yang rumit. Sebaliknya, sistem ini fokus pada hal-hal yang benar-benar sering digunakan sehari-hari, sehingga terasa praktis dan efisien.</p>
+    </div>
+
+    <!-- BAB 2: Peran HCD (isi sesuai file) -->
+    <div class="bab">
+        <h2>2. Peran Human-Centered Design (HCD) dalam Pengembangan Teknologi Masa Depan</h2>
+        <p>Human-Centered Design (HCD) menurut saya bukan sekadar teori desain, tetapi cara berpikir dalam mengembangkan teknologi dengan benar-benar memahami kebutuhan manusia sebagai pengguna utama. Saat ini perkembangan teknologi seperti Artificial Intelligence (AI), Big Data, dan Internet of Things (IoT) berlangsung sangat cepat. Justru karena semakin canggih, pendekatan yang berpusat pada manusia menjadi semakin penting agar teknologi tersebut tidak terasa rumit atau menjauh dari penggunanya.</p>
+
+        <p>Pada dasarnya, teknologi diciptakan untuk membantu manusia. Jika pengembang hanya fokus pada kecanggihan sistem tanpa memikirkan bagaimana orang akan menggunakannya, maka hasilnya bisa jadi membingungkan. Banyak sistem yang sebenarnya kuat secara teknis, tetapi sulit dipahami oleh pengguna biasa karena kurang mempertimbangkan aspek kenyamanan dan kemudahan penggunaan.</p>
+
+        <p>Tanpa pendekatan HCD, risiko yang mungkin muncul cukup besar. Pengguna bisa merasa kesulitan, melakukan kesalahan saat mengoperasikan sistem, bahkan kehilangan kepercayaan terhadap teknologi tersebut. Dalam pengembangan AI misalnya, penting bagi sistem untuk memberikan penjelasan yang jelas tentang bagaimana suatu keputusan dihasilkan. Jika tidak transparan, pengguna bisa merasa ragu dan tidak yakin terhadap hasil yang diberikan.</p>
+
+        <p>Hal yang sama juga berlaku pada pengolahan Big Data. Data dalam jumlah besar tidak akan berarti jika tidak disajikan dalam bentuk yang mudah dimengerti. Visualisasi yang sederhana dan informatif jauh lebih membantu dibandingkan tampilan angka-angka kompleks tanpa penjelasan. Pada perangkat IoT, kemudahan kontrol juga menjadi kunci agar pengguna tidak kewalahan dengan banyaknya informasi dari berbagai perangkat yang saling terhubung.</p>
+
+        <p>Bagi saya, HCD berperan dalam membuat teknologi terasa lebih manusiawi. Desain yang inklusif dan sederhana memungkinkan lebih banyak orang untuk mengakses dan memanfaatkannya tanpa harus memiliki kemampuan teknis yang tinggi. Selain itu, pendekatan ini juga dapat mengurangi stres pengguna karena sistem dirancang sesuai pola pikir dan kebiasaan manusia.</p>
+
+        <p>Pengalaman saya menggunakan ChromeOS menjadi contoh nyata bahwa desain yang sederhana dan konsisten dapat memberikan kenyamanan dalam penggunaan sehari-hari. Ke depannya, saya melihat bahwa Human-Centered Design akan menjadi semakin penting agar perkembangan teknologi tetap relevan, mudah digunakan, dan benar-benar memberikan manfaat bagi kehidupan manusia.</p>
+    </div>
+
+    <!-- BAB 3: Kesimpulan (isi sesuai file) -->
+    <div class="bab">
+        <h2>3. Kesimpulan</h2>
+        <p>Pengalaman saya menggunakan ChromeOS menunjukkan bahwa desain yang sederhana, konsisten, dan intuitif mampu memberikan pengalaman pengguna yang sangat positif. Sistem ini membuktikan bahwa teknologi yang baik bukanlah yang paling kompleks, melainkan yang paling efektif dalam memenuhi kebutuhan manusia.</p>
+
+        <p>Di masa depan, peran Human-Centered Design akan semakin krusial dalam pengembangan AI, Big Data, IoT, dan sistem cerdas lainnya. Dengan menempatkan manusia sebagai pusat desain, teknologi dapat benar-benar menjadi alat yang meningkatkan kualitas hidup, bukan justru menambah kompleksitas.</p>
+
+        <p>Pendekatan ini memastikan bahwa kemajuan teknologi tetap selaras dengan kebutuhan, kemampuan, dan nilai-nilai manusia.</p>
+    </div>
+
+    <!-- Tanda tangan / penutup -->
+    <div class="ttd">
+        <div>
+            Hormat saya,<br><br><br>
+            <strong>Dimas Kurniawan</strong><br>
+            NIM 25120300016
+        </div>
+        <div>
+            Cakrawala University<br>
+            Maret 2026
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-laporan">
+        <p><i class="fas fa-laptop-code"></i> Tugas HCD02 – Human-Centered Design | Program Studi Ilmu Komputer | Cakrawala University</p>
+        <p>Dosen Pengampu: Dr. Fandy Neta, S.Pd., M.Pd.T.</p>
+    </div>
+</div>
+
+<!-- Tidak ada interaktivitas yang mengubah isi konten, karena konten sudah sesuai persis file -->
+</body>
+</html>
