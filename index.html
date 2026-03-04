@@ -432,10 +432,9 @@ DAN PERANNYA DI MASA DEPAN
                     <span>Akses terbuka — download file langsung tanpa verifikasi.</span>
                 </div>
 
-                <!-- download button -->
+                <!-- download button - MEMBUKA TAB BARU -->
                 <div class="download-button">
-                    <a href="https://dimask016.github.io/hcd02-esai/" 
-                       download="Esai_HCD_Dimas_Kurniawan_25120300016.pdf" 
+                    <a href="https://dimask016.github.io/hcd02-esai/Esai_HCD_Dimas_Kurniawan_25120300016.pdf" 
                        class="btn-download" 
                        target="_blank">
                         <i class="fas fa-download"></i> Download File
@@ -451,9 +450,12 @@ DAN PERANNYA DI MASA DEPAN
 
                 <!-- footer links -->
                 <div class="footer-links">
-                    <a href="#" id="githubMockLink"><i class="fab fa-github"></i> https://dimask016.github.io/hcd02-esai/</a>
-                    <a href="esai-chromeos.html"><i class="fas fa-file-pdf"></i> Esai ChromeOS</a>
-                   
+                    <a href="https://dimask016.github.io/hcd02-esai/Esai_HCD_Dimas_Kurniawan_25120300016.pdf" target="_blank">
+                        <i class="fab fa-github"></i> File PDF langsung
+                    </a>
+                    <a href="esai-chromeos.html" target="_blank">
+                        <i class="fas fa-file-alt"></i> Baca Esai ChromeOS
+                    </a>
                 </div>
             </div>
         </div>
@@ -465,7 +467,7 @@ DAN PERANNYA DI MASA DEPAN
             setTimeout(function() {
                 const successDiv = document.createElement('div');
                 successDiv.className = 'success-message';
-                successDiv.innerHTML = '<i class="fas fa-check-circle"></i> ✅ Download dimulai! Terima kasih.';
+                successDiv.innerHTML = '<i class="fas fa-check-circle"></i> ✅ File dibuka di tab baru! Silakan simpan PDF.';
                 
                 const existingSuccess = document.querySelector('.success-message');
                 if (!existingSuccess) {
